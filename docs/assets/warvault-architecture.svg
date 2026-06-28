@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">warvault architecture</title>
+  <desc id="desc">warvault scans read-only source folders, indexes assets, stores metadata and cache files in the project, and serves a React workbench through a Python web API.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#374151" />
+    </marker>
+    <style>
+      text {
+        font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "Segoe UI", sans-serif;
+        fill: #111827;
+      }
+      .box {
+        fill: #f9fafb;
+        stroke: #374151;
+        stroke-width: 1.5;
+        rx: 8;
+      }
+      .hub {
+        fill: #eef2ff;
+        stroke: #4338ca;
+      }
+      .store {
+        fill: #ecfdf5;
+        stroke: #047857;
+      }
+      .asset {
+        fill: #fff7ed;
+        stroke: #c2410c;
+      }
+      .api {
+        fill: #f0f9ff;
+        stroke: #0369a1;
+      }
+      .label {
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .small {
+        font-size: 14px;
+      }
+      .line {
+        stroke: #374151;
+        stroke-width: 1.8;
+        fill: none;
+        marker-end: url(#arrow);
+      }
+    </style>
+  </defs>
+
+  <rect x="40" y="40" width="170" height="72" class="box" />
+  <text x="125" y="82" text-anchor="middle" class="label">源目录</text>
+  <text x="125" y="102" text-anchor="middle" class="small">只读输入</text>
+
+  <rect x="285" y="40" width="170" height="72" class="box" />
+  <text x="370" y="82" text-anchor="middle" class="label">扫描层</text>
+  <text x="370" y="102" text-anchor="middle" class="small">发现文件变化</text>
+
+  <rect x="255" y="160" width="140" height="66" class="box asset" />
+  <text x="325" y="199" text-anchor="middle" class="label">模型</text>
+
+  <rect x="410" y="160" width="140" height="66" class="box asset" />
+  <text x="480" y="199" text-anchor="middle" class="label">音效</text>
+
+  <rect x="565" y="160" width="140" height="66" class="box asset" />
+  <text x="635" y="199" text-anchor="middle" class="label">图片</text>
+
+  <rect x="360" y="285" width="210" height="74" class="box hub" />
+  <text x="465" y="319" text-anchor="middle" class="label">统一索引</text>
+  <text x="465" y="341" text-anchor="middle" class="small">身份、搜索、标签</text>
+
+  <rect x="150" y="405" width="170" height="64" class="box store" />
+  <text x="235" y="443" text-anchor="middle" class="label">数据库</text>
+
+  <rect x="395" y="405" width="170" height="64" class="box store" />
+  <text x="480" y="443" text-anchor="middle" class="label">预览缓存</text>
+
+  <rect x="640" y="405" width="170" height="64" class="box store" />
+  <text x="725" y="443" text-anchor="middle" class="label">转换记录</text>
+
+  <rect x="720" y="285" width="170" height="74" class="box api" />
+  <text x="805" y="319" text-anchor="middle" class="label">Python API</text>
+  <text x="805" y="341" text-anchor="middle" class="small">任务与文件访问</text>
+
+  <rect x="720" y="40" width="170" height="72" class="box api" />
+  <text x="805" y="82" text-anchor="middle" class="label">React 工作台</text>
+  <text x="805" y="102" text-anchor="middle" class="small">搜索、预览、维护</text>
+
+  <path d="M210 76 H285" class="line" />
+  <path d="M370 112 V142 C370 152 325 150 325 160" class="line" />
+  <path d="M395 193 H410" class="line" />
+  <path d="M550 193 H565" class="line" />
+  <path d="M325 226 C325 260 430 260 430 285" class="line" />
+  <path d="M480 226 V285" class="line" />
+  <path d="M635 226 C635 260 500 260 500 285" class="line" />
+  <path d="M465 359 C465 385 235 380 235 405" class="line" />
+  <path d="M465 359 V405" class="line" />
+  <path d="M465 359 C465 385 725 380 725 405" class="line" />
+  <path d="M570 322 H720" class="line" />
+  <path d="M805 285 V112" class="line" />
+</svg>

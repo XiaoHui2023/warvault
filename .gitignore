@@ -34,4 +34,13 @@ Thumbs.db
 *.swp
 *.swo
 
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Local data
+.warvault/
+logs/
+config.yaml
+
 .cursor/

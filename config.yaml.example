@@ -1,0 +1,25 @@
+server:
+  host: 0.0.0.0
+  port: 8765
+  # Use "/" for normal access, or "/warvault" when reverse-proxied under ip:port/warvault/.
+  base_url: /
+
+logging:
+  enabled: true
+  level: INFO
+  root_dir: logs
+
+auto_refresh:
+  enabled: true
+  interval_seconds: 30
+  initial_scan: true
+
+paths:
+  # SQLite database defaults to data_dir/warvault.sqlite3.
+  data_dir: .warvault
+  database_path: .warvault/warvault.sqlite3
+
+sources:
+  - name: Example Models
+    path: '<path-to>/models'
+    kinds: [model]

@@ -3,3 +3,8 @@ cd /d "%~dp0"
 if not exist ".venv" python -m venv .venv
 ".venv\Scripts\python.exe" -m pip install -U pip
 ".venv\Scripts\python.exe" -m pip install -e ".[dev]"
+if exist "frontend\package.json" (
+  pushd frontend
+  npm install
+  popd
+)

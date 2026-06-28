@@ -5,17 +5,26 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "warvault"
 version = "0.0.0"
-description = "Warvault 本地命令行工具"
+description = "warvault 本地资源库工具"
 requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115",
+    "PyYAML>=6.0",
+    "uvicorn[standard]>=0.30",
+]
 
 [project.optional-dependencies]
 dev = [
+    "httpx>=0.28",
     "pytest>=7",
 ]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-py-modules = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

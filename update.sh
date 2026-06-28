@@ -8,3 +8,6 @@ fi
 source .venv/bin/activate
 python -m pip install -U pip
 python -m pip install -e ".[dev]"
+if [[ -f frontend/package.json ]]; then
+  (cd frontend && npm install)
+fi
